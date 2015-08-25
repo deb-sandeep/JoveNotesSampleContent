@@ -1,0 +1,17 @@
+subject "Test Subject 1"
+chapterNumber 1.1
+chapterName "Sandbox"
+
+@qa "Question with uml"
+"{{@uml
+|Siraj|
+:Sent reminders to British;
+|British|
+:Ignored reminders;
+|Siraj|
+:Captured Calcutta;
+|British|
+:Robert Clive re-captured Calcutta;
+stop
+}}"
+"This is the main text body of the answer"

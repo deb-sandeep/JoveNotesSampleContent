@@ -1,0 +1,140 @@
+subject "Test Subject 1"
+chapterNumber 2.0
+chapterName "Showcase Chapter"
+
+// Definition
+@definition"Homogeneous"
+"A substance can be defined as homogeneous if it contains only one kind of 
+particles. Homogeneous is Latin for 'the same kind'."
+
+@definition"Heterogeneous"
+"A substance can be defined as heterogeneous if it contains multiple kinds of 
+particles. Opposite of homogeneous."
+
+// Teacher note
+@tn "सदाचार का तावीज़" 
+"{{@audio page-2.mp3}}
+
+{{@img page-2.png}}"
+
+@tn "Monsoon formation in Indian sub-continent"
+"{{@youtube EueWN0-lZ0A}}"
+
+// QA
+@qa "State the differences between compounds and mixtures."
+"
+Compounds                             | Mixtures 
+--------------------------------------|-----------------------------------------
+Components present in definite ratio  | Components present in varying ratio
+Compound is always homogeneous        | Mixture can be homogeneous and heterogeneous
+Particles are of one type             | Particles are of more than one type
+Have definite set of properties       | No definite set of properties
+Components do not retain their original properties | Components retain their original properties
+Have a sharp melting and boiling point| No sharp melting and boiling point
+Components can be separated chemically| Components can be separated chemically and physically         
+"
+cmap {"
+Comparison attributes >> Components, Homogeneity, Definite properties ;
+Components >> Ratio, Properties, Separation, Type ;
+"}
+
+@qa "Describe the structure of a tooth." 
+"{{@img tooth structure.png}}"
+"The tooth has two anatomical parts - **crown** and **root**.  
+
+1. **Crown** - The part of a tooth which is above the gums and is visible in 
+   the mouth.
+2. **Root** - The part of the teeth embedded in the jaw. It anchors the tooth 
+   in its bony socket and is not usually visible. The root is covered by a layer 
+   of tough, yellowish, bone-like tissue called the **cementum**
+
+In addition the structure of the tooth is divided into the following parts:
+
+1. The core of the teeth consisting of soft tissues containing blood 
+    vessels and nerve supply, called **pulp**
+2. A layer of bone-like material surrounding the pulp cavity called 
+   **dentine**
+3. Hard covering on the dentine called **Enamel**
+"
+cmap {"
+Tooth >has two anatomical parts> Crown, Root ;
+Crown >is> Above the gums, Visible in mouth ;
+Root >is surrounded by> Cementum >is> Bone like tissue >which is> Hard, Yellowish ;
+Tooth >structure divided into> Pulp, Dentine, Enamel ;
+Pulp >is the> Core of the teeth ;
+Pulp >is made of> \"Soft tissues, blood vessels and nerves\" ;
+Dentine >consists of> Living cells >embedded in> Non living material >called> Matrix ;
+Dentine >covered by> Enamel ;
+Enamel >is> Hardest substance in human body ;
+"}
+
+// Matching
+@match "Match the following" {
+    "Lungs"   = "Carbon dioxide"
+    "Kidneys" = "Nitrogenous wastes, water, salts, toxins, drugs"
+    "Liver"   = "Bile pigment"
+    "Skin"    = "Excess water, salt"
+}
+
+// Image label
+@image_label {
+    imageName "teeth.png"
+    104,  21 = "Molars",
+    242,  20 = "Premolars",
+    364,  24 = "Incisors",
+    305, 201 = "Canines"
+}
+
+// True false
+@true_false "Permanent tissues consist of living cells only." false
+"Permanent tissues can be made up of living or dead cells."
+
+// Fill in the blanks
+@fib "{0} is the predecessor of Hindi language" 
+"Hindavi"
+
+// Equations
+@equation "s = ut + \\frac{1}{2}at^2" {
+    "**Displacement** as a function of initial velocity, acceleration and time."
+    where
+    "s" = "Displacement",
+    "u" = "Initial velocity",
+    "a" = "Acceleration",
+    "t" = "Time"
+}
+
+// Chemical equations
+@chem_equation "Aluminum metal dissolves in an aqueous solution of sulfuric 
+acid to form hydrogen gas bubbles and a solution of aluminum sulfate." {
+    
+    "Al(s) + H2SO4(aq)" >> "H2(g) + Al2(SO4)3(aq)"
+}
+
+// Reference to context
+@rtc {
+    context "You'll excuse me for speaking, Miss. But I see you know the marshal 
+    here. If you'll ask him to speak a word for me when we get to the pen, he'll 
+    do it. It'll make things easier for me there. He's taking me to Leavenworth
+    prison."
+
+    @qa "Who is the speaker? Who is 'miss'? Where are these two people?"
+    "The speaker is the marshal who is pretending to be a criminal. Miss Fairchild, 
+    Easton's old acquaintance, is referred to as Miss. These two people are 
+    passengers aboard the eastbound Boston and Maine express."    
+     
+    @qa "How did the miss know the marshal?" 
+    "The marshal, Mr.Easton, was miss Fairchild's old acquaintance from Washington"
+    
+    @qa "What had startled the lady about the marshal?"
+    "The fact that the marshal was handcuffed startled the lady."
+    
+    @qa "Why was the speaker being taken to prison?"
+    "The speaker has been arrested for counterfeiting and was being taken to 
+    Leavenworth prison for 6 years to serve his term."   
+}
+
+// Spell bee
+@spellbee "Circumstantial"
+@spellbee "Conscience"
+@spellbee "Contrived"
+@spellbee "Countenance"

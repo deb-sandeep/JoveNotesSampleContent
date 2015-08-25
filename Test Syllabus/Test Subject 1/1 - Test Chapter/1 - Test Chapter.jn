@@ -1,0 +1,258 @@
+subject "Test Subject 1"
+chapterNumber 1.0
+chapterName "Test Chapter"
+
+@qa "UML question"
+"
+This text has an embedded
+{{@cmap
+Tooth >has two anatomical parts> Crown, Root ;
+Crown >is> Above the gums, Visible in mouth ;
+Root >is surrounded by> Cementum >is> Bone like tissue >which is> Hard, Yellowish ;
+Tooth >structure divided into> Pulp, Dentine, Enamel ;
+}}
+cmap image."
+
+
+@fib "Asma's house has a <code>{0} {1} r {2} {3} n</code>"
+"g" "a" "d" "e"
+
+@qa "Describe the structure of a tooth." 
+"The tooth has two anatomical parts - **crown** and **root**.  
+
+1. **Crown** - The part of a tooth which is above the gums and is visible in 
+   the mouth.
+2. **Root** - The part of the teeth embedded in the jaw. It anchors the tooth 
+   in its bony socket and is not usually visible. The root is covered by a layer 
+   of tough, yellowish, bone-like tissue called the **cementum**
+
+In addition the structure of the tooth is divided into the following parts:
+
+1. The core of the teeth consisting of soft tissues containing blood 
+    vessels and nerve supply, called **pulp**
+2. A layer of bone-like material surrounding the pulp cavity called 
+   **dentine**
+3. Hard covering on the dentine called **Enamel**
+
+{{@img tooth structure.png}}
+"
+cmap {"
+Tooth >has two anatomical parts> Crown, Root ;
+Crown >is> Above the gums, Visible in mouth ;
+Root >is surrounded by> Cementum >is> Bone like tissue >which is> Hard, Yellowish ;
+Tooth >structure divided into> Pulp, Dentine, Enamel ;
+Pulp >is the> Core of the teeth ;
+Pulp >is made of> \"Soft tissues, blood vessels and nerves\" ;
+Dentine >consists of> Living cells >embedded in> Non living material >called> Matrix ;
+Dentine >covered by> Enamel ;
+Enamel >is> Hardest substance in human body ;
+"}
+
+@wm "Wreck"     "The destruction of a ship at sea. What sea?"
+@wm "Chieftain" "The leader of the people or a clan"
+@wm "Brow"      "Forehead"
+@wm "Despair"   "Complete lack of hope"
+@wm "Shroud"    "A length of cloth used to wrap bodies in preparation of a burial"
+
+@definition"Homogeneous"
+"A substance can be defined as homogeneous if it contains only one kind of 
+particles. Homogeneous is Latin for 'the same kind'."
+
+@definition"Heterogeneous"
+"A substance can be defined as heterogeneous if it contains multiple kinds of 
+particles. Opposite of homogeneous."
+
+@tn "Explain about electrical potential. Work done by an electric field 
+in carrying a unit positive charge from infinity to that point."
+
+@character "Qutubuddin Aibak" 
+"General of Muhammad Ghori. Founder of slave dynasty."
+
+@character "Qutb-ud-din Bakhtiyar Kaki" 
+"A Sufi saint, in honour of whom Qutub minar was built by Qutubuddin Aibak"
+
+@event "Death of Qutubuddin Aibak" "1210 AD"
+
+@event "Start of Slave dynasty" "1206 AD"
+
+@fib "{0} is the predecessor of Hindi language" 
+"Hindavi"
+
+@match "Match the following" {
+    "Lungs"   = "Carbon dioxide"
+    "Kidneys" = "Nitrogenous wastes, water, salts, toxins, drugs"
+    "Liver"   = "Bile pigment"
+    "Skin"    = "Excess water, salt"
+}
+
+@true_false "Sun is a star." true 
+"Sun emits its own light, hence it is a star."
+
+@spellbee "animosity"
+
+@image_label {
+    imageName "teeth.png"
+    104,  21 = "Molars",
+    242,  20 = "Premolars",
+    364,  24 = "Incisors",
+    305, 201 = "Canines"
+}
+
+@chem_compound "NaHCO3" "Sodium Bi-Carbonate" "Baking Soda"
+
+@chem_compound "CO2" "Carbon di-oxide"
+
+@equation "s = ut + \\frac{1}{2}at^2" {
+    "**Displacement** as a function of initial velocity, acceleration and time."
+    where
+    "s" = "Displacement",
+    "u" = "Initial velocity",
+    "a" = "Acceleration",
+    "t" = "Time"
+}
+
+@equation "v = u + at" {
+    "**Final velocity** as a function of initial velocity, acceleration and time."
+    where
+    "v" = "Final velocity",
+    "u" = "Initial velocity",
+    "a" = "Acceleration",
+    "t" = "Time"
+}
+
+@qa "Test of all markdown typography."
+"
+## This is a H2 list
+#### This is a H4 list
+
+___
+
+---
+
+***
+
+
+**This is bold text**  
+_This is italic text_  
+~~This is strikethrough text~~  
+
+> This is 1st level blockquote
+>> This is second level blockquote
+>>> This is third level blockquote
+
+* Unordered list item 1
+* Unordered list item 2
+    - Embedded list item 1
+    - Embedded list item 2
+* Unordered list item 3
+
+1. Ordered list item 1
+2. Ordered list item 2
+3. Ordered list item 3
+    1. Embedded ordered list item 1
+    2. Embedded ordered list item 2
+4. Ordered list item 4
+
+This is a `code` element.
+
+``` html
+  <div class=\"panel-heading\">
+    <span class=\"glyphicon glyphicon-fire\"></span>&nbsp;&nbsp;
+    <span class=\"panel-title\">Chemical Equations</span>
+  </div>
+```
+
+Line break test. This line is ended by a newline after two trailing spaces  
+and hence this line should show up in a new line.
+
+Line break test. This line is ended by a new line without any trailing spaces
+and hence this line should not break.
+
+This will translate to a dash ---
+
+This will translate to ellipses ...
+
+Tables
+------
+
+Simple Table:
+
+First | Second
+------|-------
+Cool  | Shit
+[this is the caption]
+
+Without header:
+
+|--------|-------|
+|Cool    | Shit  |
+|is this | really
+
+With some alignment:
+
+:-----|-----:|----|:---:
+Cool  | Shit | in | here
+
+And now to some colspan:
+
+Names ||
+ Name | Firstname | Age
+------|-----------|----:
+  Fox | Peter     | 42
+  Guy | Ritchie   | ca. 60
+
+
+Multimarkdown example:
+
+|             |          Grouping           ||
+First Header  | Second Header | Third Header |
+ ------------ | :-----------: | -----------: |
+Content       |          *Long Cell*        ||
+Content       |   **Cell**    |         Cell |
+New section   |     More      |         Data |
+And more      |               |   And more   |
+[this is the caption]
+"
+
+@qa "इस नाटक के द्वारा मुंशी प्रेमचंद ने हमें क्या शिक्षा दी है?"
+"हमारे समाज में लड़के के जनम पर ख़ुशी मनाई जाती है पर लड़की के जनम पर शोक |  
+मुंशी प्रेमचंद ने इस नाटक के द्वारा इस सोच को बदलने की कोशिश की है |   
+उन्होंने बताया है की लड़की व लड़के में कोई अंतर नहीं करना चाहिए |"
+
+@chem_equation "Aluminum metal dissolves in an aqueous solution of sulfuric 
+acid to form hydrogen gas bubbles and a solution of aluminum sulfate." {
+    
+    "Al(s) + H2SO4(aq)" >> "H2(g) + Al2(SO4)3(aq)"
+}
+
+@rtc {
+    context "You'll excuse me for speaking, Miss. But I see you know the marshal 
+    here. If you'll ask him to speak a word for me when we get to the pen, he'll 
+    do it. It'll make things easier for me there. He's taking me to Leavenworth
+    prison."
+
+    @qa "Who is the speaker? Who is 'miss'? Where are these two people?"
+    "The speaker is the marshal who is pretending to be a criminal. Miss Fairchild, 
+    Easton's old acquaintance, is referred to as Miss. These two people are 
+    passengers aboard the eastbound Boston and Maine express."    
+     
+    @qa "How did the miss know the marshal?" 
+    "The marshal, Mr.Easton, was miss Fairchild's old acquaintance from Washington"
+    
+    @qa "What had startled the lady about the marshal?"
+    "The fact that the marshal was handcuffed startled the lady."
+    
+    @qa "Why was the speaker being taken to prison?"
+    "The speaker has been arrested for counterfeiting and was being taken to 
+    Leavenworth prison for 6 years to serve his term."   
+}
+
+@qa "Pronounce 'This is a simple sound clip'"
+"
+Col1                  | Col2
+----------------------|------------------------
+This is a sound clip. | {{@audio sample.mp3}}
+"
+
+@qa "Answer has a document link." 
+"Click this to open the document {{@doc Anand Mulk Raj - Mustachio.pdf}}"
