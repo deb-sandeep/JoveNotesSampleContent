@@ -138,3 +138,18 @@ acid to form hydrogen gas bubbles and a solution of aluminum sulfate." {
 @spellbee "Conscience"
 @spellbee "Contrived"
 @spellbee "Countenance"
+
+@qa "Question with uml"
+"{{@uml
+|Siraj|
+:Sent reminders to British;
+|British|
+:Ignored reminders;
+|Siraj|
+:Captured Calcutta;
+|British|
+:Robert Clive re-captured Calcutta;
+stop
+}}"
+"This is the main text body of the answer"
+
