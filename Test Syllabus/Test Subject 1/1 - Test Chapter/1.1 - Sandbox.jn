@@ -13,14 +13,17 @@ chapterName "Sandbox"
           "Kepler",
           "Birds"
     }
+    @numOptionsToShow 4
     @explanation "Earth and Neptune are planets, others are not."
 }
+
 
 @multi_choice "Given \\(a\\), \\(u\\), \\(t\\), choose the correct formulae
 for finding \\(v\\)." {
     @options {
         "\\(v = u + at\\)" correct,
         "\\(v = \\frac 1 2 at^2\\)",
-        "\\(v = \\frac S t\\)"
+        "\\(v = \\frac S t\\)",
+        "{{@img teeth.png}}"
     }
 }
