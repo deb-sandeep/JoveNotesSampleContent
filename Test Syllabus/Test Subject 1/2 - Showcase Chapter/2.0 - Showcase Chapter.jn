@@ -153,3 +153,12 @@ stop
 }}"
 "This is the main text body of the answer"
 
+@multi_choice "Find the odd one out and give reasons." {
+    @options {
+        "Nose",
+        "Ears",
+        "Eyes",
+        "Legs" correct
+    }
+    @explanation "**Legs** because they are not sense organs."
+}
