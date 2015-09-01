@@ -2,14 +2,21 @@ subject "Test Subject 1"
 chapterNumber 1.1
 chapterName "Sandbox"
 
-@match "Words and roots" {
-    "auto"    = "self"
-    "geitono" = "neighbouring"
-    "allo"    = "other"
-    "cleisto" = "closed"
-    
-    @mcq_config {
-        @forwardCaption "Select the meaning of the following root:"
-        @reverseCaption "Select the root of the following word:"
-    }
-}
+@qa "Solve the following multiplication:
+
+  | 2| 2| 2| 2
+  | x|  | 3| 2
+--|--|--|--|--
+ .| .| .| .| .
+ .| .| .| .| .
+ .| .| .| .| .
+ .| .| .| .| .
+""
+  | 2| 2| 2| 2
+  | x|  | 3| 2
+--|--|--|--|--
+ .| 4| 4| 4| 4
+ 6| 6| 6| 6| .
+ .| .| .| .| .
+ 7| 1| 1| 0| 4
+"
