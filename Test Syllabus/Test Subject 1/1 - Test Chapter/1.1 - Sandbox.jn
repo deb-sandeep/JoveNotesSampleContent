@@ -1,22 +1,94 @@
 subject "Test Subject 1"
 chapterNumber 1.1
 chapterName "Sandbox"
+script{"
+    this.computeDivisibilityChoices = function( rangeMean, divisibleByNum ) {
+        var choices = [] ;
+        for( var i=0; i<5; i++ ) {
 
-@qa "Solve the following multiplication:
+            if( i==0 ) { 
+                choices[0] = $util.randomInt( rangeMean-5, rangeMean+5 ) * 
+                             divisibleByNum ; 
+            }
+            else {
+                var num = 0 ;
+                do {
+                    num = $util.randomInt( rangeMean-5, rangeMean+5 )*divisibleByNum - 1 ;
+                }
+                while( choices.indexOf( num ) != -1 ) ;
+                choices[i] = num ; 
+            }
+        }
+        return choices ;
+    }
 
-  | 2| 2| 2| 2
-  | x|  | 3| 2
---|--|--|--|--
- .| .| .| .| .
- .| .| .| .| .
- .| .| .| .| .
- .| .| .| .| .
-""
-  | 2| 2| 2| 2
-  | x|  | 3| 2
---|--|--|--|--
- .| 4| 4| 4| 4
- 6| 6| 6| 6| .
- .| .| .| .| .
- 7| 1| 1| 0| 4
-"
+    this.getRangeMean = function( $e ) {
+        switch( $e ) {
+            case 'A1' : return 110;
+            case 'A2' : return 80;
+            case 'B1' : return 50;
+            case 'B2' : return 20;
+            case 'C1' :
+            case 'C2' : return 15;
+            case 'D'  : return 7 ;
+        }
+    }
+"}
+
+//@qa "A body is moving with velocity {{@var U}} m/s. Brakes are applied and the 
+//body comes to rest in {{@var T}} seconds. Find the retardation of the body."
+//"
+//#### Given 
+//1. Initial velocity \\(u = {{@var U}} \\ ms^{-1}\\)
+//2. Time of motion \\(t = {{@var T}} \\ s\\)
+//3. Final velocty \\(v = 0 ms^{-1}\\)
+//
+//#### To find
+//1. Retardation \\(a\\)
+//
+//-----------
+//
+//$$ v = u + at $$
+//$$ a = \\frac{( v - u )}{t} $$
+//
+//Substituting values:
+//
+//$$ a = \\frac{( 0 - {{@var U}} )}{ {{@var T}} } $$
+//$$ a = - \\frac{( {{@var U}} )}{ {{@var T}} } $$
+//$$ a = {{@var A}} \\ ms^{-2}$$
+//"
+//script_expressions {
+//
+//    "U" = "$q.initialVelocity",
+//    "T" = "$q.time",
+//    "A" = "$q.acceleration"
+//}
+//script {"
+//    this.time            = 0 ;
+//    this.initialVelocity = 0 ;
+//    this.acceleration    = 0 ;
+//    
+//    this.initialize = function( $c ) {
+//        this.acceleration    = -1* $c.randomInt( 1, 10 )/2 ;
+//        this.time            = $c.randomInt( 1, 20 ) ;
+//        this.initialVelocity = -1* this.acceleration * this.time ;
+//    }
+//"}
+//
+
+@multi_choice "Find the number which is divisible by 3" {
+    @options {
+        "{{@var N1}}" correct,
+        "{{@var N2}}", "{{@var N3}}", "{{@var N4}}", "{{@var N5}}"
+    }
+}
+script_expressions {
+    "N1" = "$q.N[0]", "N2" = "$q.N[1]", "N3" = "$q.N[2]", 
+    "N4" = "$q.N[3]", "N5" = "$q.N[4]"
+}
+script {"
+    this.N = [] ;
+    this.initialize = function( $e ) {
+        this.N = $c.computeDivisibilityChoices( $c.getRangeMean( $e ), 3 ) ;
+    }
+"}
