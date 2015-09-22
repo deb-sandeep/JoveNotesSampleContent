@@ -15,10 +15,6 @@ Root >is surrounded by> Cementum >is> Bone like tissue >which is> Hard, Yellowis
 Tooth >structure divided into> Pulp, Dentine, Enamel ;
 }}
 cmap image."
-script {"
-This is script for UML question.
-"}
-
 
 @fib "Asma's house has a <code>{0} {1} r {2} {3} n</code>"
 "g" "a" "d" "e"
