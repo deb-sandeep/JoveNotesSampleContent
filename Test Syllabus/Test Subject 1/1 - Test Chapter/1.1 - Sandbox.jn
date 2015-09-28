@@ -2,73 +2,17 @@ subject "Test Subject 1"
 chapterNumber 1.1
 chapterName "Sandbox"
 
-@rtc {
-    context "RTC context text with **formatted text**. {{@img smiley.png}}"
-    
-    @true_false "Sun is a star." true "Sun emits its own light."
-    
-    @true_false "Moon is a star." false "Moon does not emit its own light, hence is not a star." 
-    
-    @image_label {
-        imageName "teeth.png"
-        104,  21 = "Molars",
-        242,  20 = "Premolars",
-        364,  24 = "Incisors",
-        305, 201 = "Canines"
-    }
+@qa "A question to test simplified table syntax."
+"{{@table
+@th Burning [combustion]
+@th Respiration
 
-    @qa "RTC Question 1" 
-    "Lorem ipsum dolor sit amet,"
-    
-    @definition "Question"
-    "Anything which has an answer."
-    
-    @fib "**Sun** is a {0}." "star"
-    
-    @wm "Cat" "A feline animal"
-    
-    @character "Akbar" "A great king."
-    
-    @tn "A teacher's note" "Teacher's note text"
-    
-    @multi_choice "Find the odd one out and give reasons." {
-        @options {
-            "Nose",
-            "Ears",
-            "Eyes",
-            "Legs" correct
-        }
-        @explanation "**Legs** because they are not sense organs."
-    }
-    
-    @match "Words and roots" {
-        "auto"    = "self"
-        "geitono" = "neighbouring"
-        "allo"    = "other"
-        "cleisto" = "closed"
-        
-        @mcq_config {
-            @forwardCaption "Select the meaning of the following root:"
-            @reverseCaption "Select the root of the following word:"
-        }
-    }
-    
-    @event "Independence of India" "1947"
-    
-    @chem_equation "Aluminum metal dissolves in an aqueous solution of sulfuric 
-    acid to form hydrogen gas bubbles and a solution of aluminum sulfate." {
-        
-        "Al(s) + H2SO4(aq)" >> "H2(g) + Al2(SO4)3(aq)"
-    }
-    
-    @chem_compound "NaCl" "Sodium Chloride" "Common Salt"
-    
-    @equation "s = ut + \\frac{1}{2}at^2" {
-        "**Displacement** as a function of initial velocity, acceleration and time."
-        where
-        "s" = "Displacement",
-        "u" = "Initial velocity",
-        "a" = "Acceleration",
-        "t" = "Time"
-    }
-}
+@td Oxidation of carbon and hydrogen present in cabon compounds, eg - _hydrocarbons_
+@td Oxidation of carbon and hydrogen present in food materials, eg - _glucose_
+
+@td Heat and light energy maybe evolved
+@td Heat energy evolved [[@img smiley.png]]
+
+@td Rapid process, occurs at **high temperature**
+@td Slow process, occurs at body temperature 
+}}"
