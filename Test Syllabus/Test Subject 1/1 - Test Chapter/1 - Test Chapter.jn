@@ -1,9 +1,6 @@
 subject "Test Subject 1"
 chapterNumber 1.0
 chapterName "Test Chapter"
-script {"
-This is the script for test chapter.
-"}
 
 @qa "UML question"
 "

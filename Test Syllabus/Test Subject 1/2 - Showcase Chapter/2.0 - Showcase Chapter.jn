@@ -1,6 +1,39 @@
 subject "Test Subject 1"
 chapterNumber 2.0
 chapterName "Showcase Chapter"
+script{"
+    this.computeDivisibilityChoices = function( rangeMean, divisibleByNum ) {
+        var choices = [] ;
+        for( var i=0; i<5; i++ ) {
+
+            if( i==0 ) { 
+                choices[0] = $util.randomInt( rangeMean-5, rangeMean+5 ) * 
+                             divisibleByNum ; 
+            }
+            else {
+                var num = 0 ;
+                do {
+                    num = $util.randomInt( rangeMean-5, rangeMean+5 )*divisibleByNum - 1 ;
+                }
+                while( choices.indexOf( num ) != -1 ) ;
+                choices[i] = num ; 
+            }
+        }
+        return choices ;
+    }
+
+    this.getRangeMean = function( $e ) {
+        switch( $e ) {
+            case 'A1' : return 9500 ;
+            case 'A2' : return 7000 ;
+            case 'B1' : return 2000 ; 
+            case 'B2' : return 990 ;
+            case 'C1' :
+            case 'C2' : return 75 ;
+            case 'D'  : return 15 ;
+        }
+    }
+"}
 
 // Definition
 @definition"Homogeneous"
@@ -265,3 +298,23 @@ stop
         "t" = "Time"
     }
 }
+
+@multi_choice "Find the number which is divisible by **3**" {
+    @options {
+        "{{@var N1}}" correct,
+        "{{@var N2}}", "{{@var N3}}", "{{@var N4}}", "{{@var N5}}"
+    }
+    @explanation "Hint: If the sum of the digits of the natural number is 
+    divisible by 3, the natural number is divisible by 3."
+}
+script_expressions {
+    "N1" = "$q.N[0]", "N2" = "$q.N[1]", "N3" = "$q.N[2]", 
+    "N4" = "$q.N[3]", "N5" = "$q.N[4]"
+}
+script {"
+    this.N = [] ;
+    this.initialize = function( $e ) {
+        this.N = $c.computeDivisibilityChoices( $c.getRangeMean( $e ), 3 ) ;
+    }
+"}
+
