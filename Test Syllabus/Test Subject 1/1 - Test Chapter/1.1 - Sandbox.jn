@@ -1,18 +1,14 @@
+@test_paper
+
 subject "Test Subject 1"
 chapterNumber 1.1
 chapterName "Sandbox"
 
-@qa "A question to test simplified table syntax."
-"{{@table
-@th Burning [combustion]
-@th Respiration
-
-@td Oxidation of carbon and hydrogen present in cabon compounds, eg - _hydrocarbons_
-@td Oxidation of carbon and hydrogen present in food materials, eg - _glucose_
-
-@td Heat and light energy maybe evolved
-@td Heat energy evolved [[@img smiley.png]]
-
-@td Rapid process, occurs at **high temperature**
-@td Slow process, occurs at body temperature 
-}}"
+@qa "## $$12 \\times 2 $$"  "## $$ 24 $$"
+@qa "## $$12 \\times 3 $$"  "## $$ 36 $$"
+@qa "## $$12 \\times 4 $$"  "## $$ 48 $$"
+@qa "## $$12 \\times 5 $$"  "## $$ 60 $$"
+@qa "## $$12 \\times 6 $$"  "## $$ 72 $$"
+@qa "## $$12 \\times 7 $$"  "## $$ 84 $$"
+@qa "## $$12 \\times 8 $$"  "## $$ 96 $$"
+@qa "## $$12 \\times 9 $$"  "## $$ 108 $$"
