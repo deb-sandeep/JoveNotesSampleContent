@@ -1,14 +1,16 @@
-@test_paper
-
 subject "Test Subject 1"
 chapterNumber 1.1
 chapterName "Sandbox"
 
-@qa "## $$12 \\times 2 $$"  "## $$ 24 $$"
-@qa "## $$12 \\times 3 $$"  "## $$ 36 $$"
-@qa "## $$12 \\times 4 $$"  "## $$ 48 $$"
-@qa "## $$12 \\times 5 $$"  "## $$ 60 $$"
-@qa "## $$12 \\times 6 $$"  "## $$ 72 $$"
-@qa "## $$12 \\times 7 $$"  "## $$ 84 $$"
-@qa "## $$12 \\times 8 $$"  "## $$ 96 $$"
-@qa "## $$12 \\times 9 $$"  "## $$ 108 $$"
+@rtc {
+    context "For a regular polygon of {{@imath \\left[ \\frac{360}{n} \\right]^o}} sides..."
+    
+    @qa "What is the measure of each interior {{@imath n}} angle?"
+    "{{@math \\left[ \\frac{( n-2 )\\times 180}{n} \\right]^o}}"
+    
+    @true_false "Is a polygon round?" false "A polygon is not round."
+    
+    @fib "A polygon has {0} sides." "n"
+}
+
+

@@ -229,7 +229,7 @@ stop
 @chem_compound "NaCl" "Sodium Chloride" "Common Salt"
 
 @rtc {
-    context "RTC context text with **formatted text**. {{@img smiley.png}}"
+    context "RTC context text with **formatted text**. {{@img smiley.png}}. And some {{@imath equation}}."
     
     @true_false "Sun is a star." true "Sun emits its own light."
     
@@ -317,4 +317,16 @@ script {"
         this.N = $c.computeDivisibilityChoices( $c.getRangeMean( $e ), 3 ) ;
     }
 "}
+
+@rtc {
+    context "For a regular polygon of {{@imath n}} sides..."
+    
+    @qa "What is the measure of each interior angle?"
+    "{{@math \\left[ \\frac{( n-2 )\\times 180}{n} \\right]^o}}"
+    
+    @qa "What is the measure of each exterior angle?"
+    "{{@math \\left[ \\frac{360}{n} \\right]^o}}"
+}
+
+
 
