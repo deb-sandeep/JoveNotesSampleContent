@@ -1,0 +1,43 @@
+@test_paper
+subject "Test Subject 1"
+chapterNumber 1.2
+chapterName "Test Paper 1"
+
+@qa "Describe some of the importance of water."
+"Water is important for natural and industrial purpose.
+
+1. Living organisms need water for almost every function carried out by each and
+   every cell.
+2. Industrial processes like agriculture, transportation, power generation 
+   depend upon water for functioning."
+   
+@qa "Name some forms of treated water and mention their usages."
+"
+1. **Distilled** water - 
+    * Purest for of water, free from all solutes 
+    * Made by condensation of water vapor
+    * Used for qualitative analysis
+2. **Pipe borne** water - 
+    * Made by filteration followed by chemical treatmet
+    * Free from bacteria, but may contain essential mineral solutes
+3. **Chlorinated** water - 
+    * Chlorine is added to kill germs
+    * Used in swimming pools"
+
+@definition "Diagonal of a polygon"
+"A line segment joining any two non-consecutive vertices of a polygon is called
+the diagonal of a polygon."
+
+@definition "Interior angle or angle of a polygon"
+"An angle formed by two consecutive sides of a polygon is called an interior 
+angle or simply an angle of the polygon."
+
+@rtc {
+    context "For a regular polygon of {{@imath n}} sides..."
+    
+    @qa "What is the measure of each interior angle?"
+    "{{@math \\left[ \\frac{( n-2 )\\times 180}{n} \\right]^o}}"
+    
+    @qa "What is the measure of each exterior angle?"
+    "{{@math \\left[ \\frac{360}{n} \\right]^o}}"
+}
