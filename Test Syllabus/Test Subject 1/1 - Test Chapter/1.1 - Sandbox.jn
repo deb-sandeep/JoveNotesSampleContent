@@ -2,15 +2,18 @@ subject "Test Subject 1"
 chapterNumber 1.1
 chapterName "Sandbox"
 
-@rtc {
-    context "For a regular polygon of {{@imath \\left[ \\frac{360}{n} \\right]^o}} sides..."
-    
-    @qa "What is the measure of each interior {{@imath n}} angle?"
-    "{{@math \\left[ \\frac{( n-2 )\\times 180}{n} \\right]^o}}"
-    
-    @true_false "Is a polygon round?" false "A polygon is not round."
-    
-    @fib "A polygon has {0} sides." "n"
-}
+@qa "Write the observations when Potassium is made to react with water."
+"{{@table
+@th [[@ichem 2K + 2H2O -> 2KOH + H2]]
 
-
+@td [[@math \\frac 2 3]]
+@td [[@imath \\sqrt{23}]]
+@td [[@chem CO2]]
+@td [[@ichem SO2]]
+@td [[@math
+a = b;
+c = d;
+e = c \\sqrt{ef}
+]]
+}}
+"
