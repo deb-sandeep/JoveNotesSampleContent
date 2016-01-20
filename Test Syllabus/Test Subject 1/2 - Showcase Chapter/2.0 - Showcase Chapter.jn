@@ -329,4 +329,19 @@ script {"
 }
 
 
+@qa "Write the observations when Potassium is made to react with water."
+"{{@table
+@th [[@ichem 2K + 2H2O -> 2KOH + H2]]
+
+@td [[@math \\frac 2 3]]
+@td [[@imath \\sqrt{23}]]
+@td [[@chem CO2]]
+@td [[@ichem SO2]]
+@td [[@math
+a = b;
+c = d;
+e = c \\sqrt{ef}
+]]
+}}
+"
 

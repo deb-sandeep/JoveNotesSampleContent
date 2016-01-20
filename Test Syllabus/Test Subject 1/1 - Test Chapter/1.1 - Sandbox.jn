@@ -1,19 +1,16 @@
+@exercise_bank
+
 subject "Test Subject 1"
 chapterNumber 1.1
 chapterName "Sandbox"
 
-@qa "Write the observations when Potassium is made to react with water."
-"{{@table
-@th [[@ichem 2K + 2H2O -> 2KOH + H2]]
+@exercise marks=20
+"What is the velocity of an object after 5 seconds which starts from rest 
+and accelerating for 2 seconds at 5 m/s^2?"
+hints {
+    "If the body starts from rest, initial velocity is zero"
+    "Once the body stops accelerating, velocity remains constant"
+}
+answer "10 m/s"
 
-@td [[@math \\frac 2 3]]
-@td [[@imath \\sqrt{23}]]
-@td [[@chem CO2]]
-@td [[@ichem SO2]]
-@td [[@math
-a = b;
-c = d;
-e = c \\sqrt{ef}
-]]
-}}
-"
+
