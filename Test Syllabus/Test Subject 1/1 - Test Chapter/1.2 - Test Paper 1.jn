@@ -1,4 +1,5 @@
-@test_paper
+@exercise_bank
+
 subject "Test Subject 1"
 chapterNumber 1.2
 chapterName "Test Paper 1"
