@@ -1,15 +1,5 @@
-@exercise_bank
-
 subject "Test Subject 1"
 chapterNumber 1.1
 chapterName "Sandbox"
 
-@exercise marks=30
-"What is the velocity of an object after 5 seconds which starts from rest 
-and accelerating for 2 seconds at 5 m/s^2?"
-hints {
-    "If the body starts from rest, initial velocity is zero"
-    "Once the body stops accelerating, velocity remains constant"
-    "{{@math v = u + at}}"
-}
-answer "10 m/s"
+@voice2text "beholden" "# सदाचार"
